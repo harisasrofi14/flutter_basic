@@ -18,15 +18,18 @@ class _HomePageState extends State<HomePage> {
   static const String _headlineText = 'Headline';
 
   List<Widget> _listWidget = [
-    NewsListPage(),
+    ArticleListPage(),
     SettingPage(),
   ];
 
   List<BottomNavigationBarItem> _bottomNavBarItems = [
     BottomNavigationBarItem(
       icon: Icon(Platform.isIOS ? CupertinoIcons.news : Icons.public),
-      label: SettingPage.settingsTitle,
+      label: _headlineText,
     ),
+    BottomNavigationBarItem(
+        icon: Icon(Platform.isIOS ? CupertinoIcons.settings : Icons.settings),
+        label: SettingPage.settingsTitle),
   ];
 
   void _onBottomNavTapped(int index) {
