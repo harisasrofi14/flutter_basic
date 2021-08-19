@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:news_cupertino_app/common/navigation.dart';
 
 class CustomScaffold extends StatelessWidget {
   final Widget body;
@@ -18,7 +19,7 @@ class CustomScaffold extends StatelessWidget {
                 ? Icon(CupertinoIcons.back)
                 : Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pop(context);
+              Navigation.back();
             },
           ),
           Padding(
